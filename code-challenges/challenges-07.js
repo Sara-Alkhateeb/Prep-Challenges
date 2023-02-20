@@ -91,17 +91,23 @@ let cvs = [
 const cvFormatter = (arr) => {
     // write your code here
 
-   let NewArray=[];
-   let Newobj={};
-    for (let i=0; i<arr.length; i++){
+
+let NewArray = [];
+  
+for (let i = 0; i < arr.length; i++) {
     if (arr[i].yearsOfExperience > 1) { 
-        let Newobj= arr[i];
-        obj.tech=Newobj.tech;
-        obj.fullname= Newobj.firstName + " " + Newobj.lastName;
+        let Newobj = {
+            
+            fullName: arr[i].firstName + (arr[i].lastName ? " " + arr[i].lastName : ""),
+            tech: arr[i].tech
+
+        };
+        NewArray.push(Newobj);
     }
-    NewArray.push(Newobj);
-};
-return NewArray;}
+}
+return NewArray;
+}
+
 
 // -------------------------------------------------------------------------------------------------------
 
