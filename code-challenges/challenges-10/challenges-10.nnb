@@ -1,0 +1,79 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function birthdayCakeCandles(candles) {\n    let max_height = Math.max(...candles);\nlet count = 0;\n for (let height of candles) {\n   if (height === max_height) {\n     count++;\n   }\n }\n return count;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Compare The Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function compareTriplets(a, b) {\n    let player1 = 0;\n    let player2 = 0;\n    for (let i = 0; i < a.length; i++) {\n      if (a[i] < b[i]) {\n        player2++;\n      } else if (a[i] > b[i]) {\n        player1++;\n      }\n    }\n    let resultScoreArr = [];\n    resultScoreArr.push(player1, player2);\n    return resultScoreArr;\n  }\n  let a = [5, 6, 7,8];\n  let b = [3, 6, 10,10];\n  let result = compareTriplets(a, b);\n  console.log(result)"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.stdout",
+                            "value": [
+                                "[ 1, 2 ]",
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function findMostFrequent(arr) {\n    let freq = {};          // Create an empty object to keep track of frequency counts\n    let maxFreq = 0;        // Initialize the maximum frequency count to zero\n    let mostFreqNum = null; // Initialize the most frequent number to null\n  \n    // Iterate over the array to update frequency counts\n    for (let num of arr) {\n      freq[num] = (freq[num] || 0) + 1; // Increment the count for the current number\n      if (freq[num] > maxFreq) {\n        // If the current number has a higher frequency than the current max, update the max\n        maxFreq = freq[num];\n        mostFreqNum = num;\n      }\n    }\n  \n    return mostFreqNum;  // Return the most frequent number\n  }\n  "
+            ],
+            "outputs": []
+        }
+    ]
+}
