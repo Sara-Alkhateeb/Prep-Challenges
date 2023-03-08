@@ -25,9 +25,9 @@
 
 const LastWord = (str) => {
   // write your code here
-  const words = str.split(' ');
-  const last = words.slice(-1);
-  return last[0];
+  const finalWord = str.lastIndexOf(' ')+1;
+  const result = str.slice(finalWord);
+  return result;
 
 }
 
@@ -69,34 +69,33 @@ const LastWord_2 = (str) => {
 // Output: "We are Venom"
 //
 
-// const replaceWords = (str) => {
-//   // write your code here
-//   const words = str.split(' ');
-//   const iIndex = words.indexOf('I');
-//   if (iIndex !== -1) {
-//     const replacedI = str.replace(/I/gi , 'We');
-//     return replacedI;
-//   }
-//   const wasIndex = words.indexOf('was');
-//   if (wasIndex !== -1) {
-//     const replacedWas = str.replace(/was/gi ,'were');
-//     return replacedWas;
-
-//   }
-
-//   const amIndex = words.indexOf('am');
-//   if (amIndex !== -1) {
-//     const replacedAm = str.replace(/am/gi ,'are');
-//     return replacedAm;
-//   }
- 
-// }
 const replaceWords = (str) => {
-  const replacedI = str.replace(/I/gi, 'We');
-  const replacedWas = replacedI.replace(/was/gi, 'were');
-  const replacedAm = replacedWas.replace(/am/gi, 'are');
-  return replacedAm;
-}
+  // write your code here
+    const words = str.split(' ');
+    const iIndex = words.indexOf('I');
+    if (iIndex !== -1) {
+      words.splice(iIndex, 1, 'We');
+    }
+    
+    const wasIndex = words.indexOf('was');
+    if (wasIndex !== -1) {
+      words.splice(wasIndex, 1, 'were');
+    }
+  
+    const amIndex = words.indexOf('am');
+    if (amIndex !== -1) {
+      words.splice(amIndex, 1, 'are');
+    }
+  
+    return words.join(' ');
+  };
+  
+// const replaceWords = (str) => {
+//   const replacedI = str.replace(/I/gi, 'We');
+//   const replacedWas = replacedI.replace(/was/gi, 'were');
+//   const replacedAm = replacedWas.replace(/am/gi, 'are');
+//   return replacedAm;
+// }
 
 // -------------------------------------------------------------------------------------------------------
 
