@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                "function appendAndDelete(s, t, k) {\n    // Write your code here\n   for (let i = 0; i < s.length; i++) {\n        if (s[i] !== t[i]) break;\n    };\n    let x = (s.length + t.length) - (i * 2);\n    if (y >= s.length + t.length) {return \"Yes\"}\n    else if (x % 2 === y % 2 && x <= y){ return \"Yes\"}\n    else {return \"No\"};\n}"
+                "function appendAndDelete(s, t, k) {  \nlet i;\n   for ( i = 0; i < s.length; i++) {\n        if (s[i] !== t[i]) break;\n    }\n\n    let x = (s.length + t.length) - (i * 2);\n    if (k >= s.length + t.length){ return \"Yes\"}\n    else if (x % 2 === k % 2 && x <= k) {return \"Yes\"}\n    else {return \"No\"};\n}\n"
             ],
             "outputs": []
         },
